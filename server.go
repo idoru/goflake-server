@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -17,6 +18,7 @@ func main() {
 }
 
 func startServer() {
+	fmt.Println("WOOOOO HOOOO")
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/ids", Id)
 	router.Queries("count", "{count:[0-9]+}")
